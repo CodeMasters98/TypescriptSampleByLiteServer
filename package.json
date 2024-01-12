@@ -5,6 +5,7 @@
   "main": "site.js",
   "scripts": {
     "start": "npm run lite",
+    "compileForMe":"tsc site.ts --outFile site.js -w",
     "lite": "lite-server"
   },
   "author": "",
