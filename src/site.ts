@@ -7,8 +7,15 @@ function add(num1, num2) {
 }
 console.log(add('5', 6));
 
+
+//ReturnType in function
 function add2(num1: number, num2: number): number {
     return num1 + num2;
+}
+
+//ReturnType in function
+function showMessage(title: string): void {
+    console.log(title)
 }
 
 //Part 02
@@ -62,4 +69,30 @@ const product:{
     category:[1,'meet']
 }
 
+
+//Other Type
 let obj1: string | number;
+
+
+//Literal Types
+type Easing = "ease-in" | "ease-out" | "ease-in-out";
+
+//callback function in js
+function addWithCallbackJs(num1:number,num2:number,cb){
+    const result = num1 + num2;
+    cb(result);
+}
+
+addWithCallbackJs(10,15,(result) => {console.log(result)});
+
+//callback function in Ts
+function addWithCallbackTs(num1:number,num2:number,cb: (num:number) => void){
+    const result = num1 + num2;
+    cb(result);
+}
+addWithCallbackTs(10,15,(result) => {console.log(result)});
+
+//Unknown Type
+let inputFromUser: unknown
+inputFromUser = "2"
+inputFromUser = 2
